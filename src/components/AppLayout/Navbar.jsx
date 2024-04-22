@@ -176,18 +176,18 @@ export default function Navbar() {
         <span className="me-3 text-white">
           Hello <b>{currentUser?.namaLengkap}</b>,
         </span>
-        <div className="menu-item">
+        <div className="menu-item" onClick={handleLogout}>
           <LogoutIcon />
           <b>Logout</b>
         </div>
       </div>
     ) : (
       <div className="menu-list">
-        <div className="menu-item">
+        <div className="menu-item" onClick={() => navigate("/login")}>
           <LoginIcon />
           <b>Masuk</b>
         </div>
-        <div className="menu-item">
+        <div className="menu-item" onClick={() => navigate("/register")}>
           <PersonAddAlt1 />
           <b>Daftar</b>
         </div>
