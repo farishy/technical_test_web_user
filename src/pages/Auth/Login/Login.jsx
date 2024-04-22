@@ -47,11 +47,14 @@ const Container = styled.div`
       flex-direction: column;
       gap: 1rem;
       background-color: white;
-      /* border: 1px solid black; */
       min-height: 300px;
       width: 450px;
       border-radius: 1rem;
       padding: 2rem;
+
+      @media only screen and (max-device-width: 480px) {
+        width: 350px;
+      }
     }
   }
 `;
@@ -128,9 +131,10 @@ export default function Login() {
                   {/* <h1>Formulir Masuk</h1> */}
                   <img
                     src="https://image.cermati.com/v1435837667/sharia/wiwturax8bnvrypeb4ic.png"
-                    className="mb-1 p-2"
+                    className="mb-1 p-2 "
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/")}
                   />
-                 
                 </div>
                 <Controller
                   control={form.control}
@@ -193,12 +197,12 @@ export default function Login() {
                     </FormGroup>
                   )}
                 />
-                 <span>
-                    Belum memiliki akun?{" "}
-                    <Link onClick={() => navigate("/register")} href="#">
-                      Klik disini!
-                    </Link>
-                  </span>
+                <span>
+                  Belum memiliki akun?{" "}
+                  <Link onClick={() => navigate("/register")} href="#">
+                    Klik disini!
+                  </Link>
+                </span>
                 <Button
                   variant="contained"
                   onClick={form.handleSubmit(handleLogin)}>
@@ -208,7 +212,7 @@ export default function Login() {
                   startIcon={<ArrowBackIcon />}
                   className="text-left w-100 mr-auto"
                   onClick={() => navigate("/")}>
-                  Kembali ke halaman utama
+                  Ke halaman utama
                 </Button>
               </div>
             </div>

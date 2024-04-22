@@ -19,8 +19,13 @@ const Container = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
-
-    /* padding-left: 5rem; */
+    .logo {
+      width: 500px;
+      cursor: pointer;
+      @media only screen and (max-device-width: 480px) {
+        width: 250px;
+      }
+    }
 
     .background-overlay {
       min-height: 100vh;
@@ -33,9 +38,11 @@ const Container = styled.div`
       .content-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin: 2rem;
         @media only screen and (max-width: 1024px) {
           grid-template-columns: 1fr;
-          row-gap: 1rem;
+          row-gap: 2rem;
+          /* margin: 0rem; */
         }
       }
     }
@@ -45,12 +52,25 @@ const Container = styled.div`
       flex-direction: column;
       gap: 1rem;
       background-color: white;
-      /* border: 1px solid black; */
       min-height: 300px;
       max-width: 550px;
       border-radius: 1rem;
-      padding: 2rem;
-      margin: 1rem;
+      padding: 2rem;;
+
+      @media only screen and (max-device-width: 480px) {
+        width: 300px;
+      }
+
+      .input-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        
+        @media only screen and (max-device-width: 480px) {
+          grid-template-columns: 1fr;
+          row-gap: 1rem;
+        }
+      }
     }
   }
 `;
@@ -109,7 +129,7 @@ export default function Register() {
             >
               <img
                 src="https://image.cermati.com/v1435837667/sharia/wiwturax8bnvrypeb4ic.png"
-                style={{height:"150px"}}
+                className="logo"
               />
             </div>
             <div className="d-flex justify-content-center">
@@ -120,7 +140,7 @@ export default function Register() {
                     Belum memiliki akun? <Link href="#">Klik disini!</Link>
                   </span> */}
                 </div>
-                <div className="d-flex gap-3">
+                <div className="input-container">
                   <Controller
                     control={form.control}
                     name="namaLengkap"
@@ -168,7 +188,7 @@ export default function Register() {
                     )}
                   />
                 </div>
-                <div className="d-flex gap-3">
+                <div className="input-container">
                   <Controller
                     control={form.control}
                     name="email"
@@ -217,7 +237,7 @@ export default function Register() {
                   />
                 </div>
 
-                <div className="d-flex gap-3">
+                <div className="input-container">
                   <Controller
                     control={form.control}
                     name="password"
@@ -309,7 +329,7 @@ export default function Register() {
                   startIcon={<ArrowBackIcon />}
                   className="text-left w-auto mr-auto"
                   onClick={() => navigate("/login")}>
-                  Kembali ke halaman masuk
+                  Ke halaman masuk
                 </Button>
               </div>
             </div>

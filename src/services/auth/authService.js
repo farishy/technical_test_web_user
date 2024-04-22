@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/auth/";
+const API_URL = "https://technicaltestmuamalat-production.up.railway.app/auth/";
 
 // Register new user
 const register = async (userData) => {
