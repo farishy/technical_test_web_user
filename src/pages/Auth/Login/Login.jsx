@@ -89,30 +89,22 @@ export default function Login() {
     }
 
     if (isSuccess || currentUser) {
-      //   console.log(axios.defaults.headers);
       Swal.fire({
         position: "center",
         icon: "success",
         title: message,
         showConfirmButton: true,
-        // timer: ,
       }).then((result) => {
         if (result.isConfirmed) {
           navigate("/");
         }
       });
-      //   window.location.reload();
     }
-
-    // dispatch(reset());
   }, [
     currentUser,
     isError,
     isSuccess,
-    message,
     navigate,
-    dispatch,
-    handleLogin,
   ]);
 
   return (

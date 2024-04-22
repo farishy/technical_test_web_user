@@ -118,7 +118,7 @@ export default function Register() {
     }
 
     dispatch(reset());
-  }, [isError, isSuccess, message, navigate, dispatch]);
+  }, [isError, isSuccess, navigate, dispatch]);
 
   return (
     <Container>
