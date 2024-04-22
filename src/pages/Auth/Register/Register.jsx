@@ -130,6 +130,7 @@ export default function Register() {
               <img
                 src="https://image.cermati.com/v1435837667/sharia/wiwturax8bnvrypeb4ic.png"
                 className="logo"
+                onClick={() => navigate("/")}
               />
             </div>
             <div className="d-flex justify-content-center">
