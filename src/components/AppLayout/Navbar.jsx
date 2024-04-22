@@ -17,6 +17,9 @@ import Button from "@mostrans/web-components/components/base/Button";
 const NavbarContainer = styled.div`
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 0;
+  background-color: white;
   .navbar {
     display: flex;
     justify-content: space-between;

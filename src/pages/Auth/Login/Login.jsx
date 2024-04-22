@@ -53,7 +53,8 @@ const Container = styled.div`
       padding: 2rem;
 
       @media only screen and (max-device-width: 480px) {
-        width: 350px;
+        width: 325px;
+        padding: 2rem;
       }
     }
   }

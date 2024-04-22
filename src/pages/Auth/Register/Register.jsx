@@ -38,10 +38,12 @@ const Container = styled.div`
       .content-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 2rem;
+        margin: 2rem 1rem;
         @media only screen and (max-width: 1024px) {
           grid-template-columns: 1fr;
           row-gap: 2rem;
+
+          margin: 2rem 1rem;
           /* margin: 0rem; */
         }
       }
@@ -55,17 +57,17 @@ const Container = styled.div`
       min-height: 300px;
       max-width: 550px;
       border-radius: 1rem;
-      padding: 2rem;;
+      padding: 2rem;
 
       @media only screen and (max-device-width: 480px) {
-        width: 300px;
+        width: 325px;
       }
 
       .input-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
-        
+
         @media only screen and (max-device-width: 480px) {
           grid-template-columns: 1fr;
           row-gap: 1rem;
